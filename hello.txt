@@ -1,0 +1,147 @@
+create database QLSach 
+on primary 
+(
+    name = 'QLSach_data', 
+    filename = 'T:\QLTV\QLSach_data.mdf', 
+    size = 20mb, 
+    maxsize = 40mb, 
+    filegrowth = 1mb
+) 
+log on 
+(
+    name = 'QLSach_Log', 
+    filename = 'T:\QLTV\QLSach_Log.ldf', 
+    size = 6mb, 
+    maxsize = 8mb, 
+    filegrowth = 1mb
+)
+
+use QLSach 
+exec sp_helpdb QLSach 
+
+alter database QLSach 
+    add filegroup DuLieuSach 
+exec sp_helpfilegroup 
+
+alter database QLSach 
+    add file (
+        name = 'QlSach_Data2', 
+        filename = 'T:\QLTV\QlSach_Data2.ndf'
+    ) to DuLieuSach 
+exec sp_helpfile 
+exec sp_helpfilegroup 
+
+alter database QLSach 
+    set read_only 
+
+alter database QLSach 
+    set read_write 
+
+create table NhomSanPham
+(
+    MaNhom int not null primary key, 
+    TenNhom nvarchar(15)
+)
+
+create table NhaCungCap 
+(
+    MaNCC int not null primary key, 
+    TenNCC nvarchar(40) not null, 
+    Diachi nvarchar(60), 
+    Phone nvarchar(24), 
+    SoFax nvarchar(24), 
+    DCMail nvarchar(50)
+)
+
+create table SanPham 
+(
+    MaSP int not null primary key, 
+    TenSP nvarchar(40) not null,
+    MaNCC int references NhaCungCap(MaNCC), 
+    MoTa nvarchar(50), 
+    MaNhom int references NhomSanPham(MaNhom), 
+    Donvitinh nvarchar(20), 
+    GiaGoc money check (GiaGoc > 0), 
+    SLTON int check (SLTON >= 0)
+)
+
+create table KhachHang 
+(
+    MaKH char(5) not null primary key, 
+    TenKh nvarchar(40) not null, 
+    LoaiKH nvarchar(3) check (LoaiKH in ('Vip', 'TV', 'VL')), 
+    DiaChi nvarchar(60), 
+    Phone nvarchar(24), 
+    DCMail nvarchar(50), 
+    DiemTL int check (DiemTL >= 0)
+)
+
+create table HoaDon 
+(
+    MaHD int not null primary key, 
+    NgayLapHD datetime check (NgayLapHD >= getdate()) default getdate(), 
+    NgayGiao DateTime, 
+    NoiChuyen nvarchar(60) not null, 
+    MaKh char(5)
+)
+
+create table CT_HoaDon 
+(
+    MaHD int not null, 
+    MaSP int not null, 
+    primary key(MaHD, MaSP), 
+    Soluong smallint check (Soluong > 0), 
+    DonGia money, 
+    ChietKhau money check (ChietKhau >= 0), 
+    constraint FK_CTHD_HD foreign key (MaHD) references HoaDon(MaHD), 
+    constraint FK_CTHD_SP foreign key (MaSP) references SanPham(MaSP)
+)
+
+alter table HoaDon 
+    add LoaiHD char(1) check (LoaiHD in ('N', 'X', 'C', 'T')) default 'N'
+
+alter table HoaDon 
+    add constraint check_NG_NL check(NgayGiao >= NgayLapHD)
+exec sp_helpconstraint HoaDon
+
+
+alter table Movie 
+    add constraint PK_movie primary key(Movie_num)
+exec sp_helpconstraint Movie
+
+alter table Movie 
+    add constraint FK_movie foreign key(Category_num) references Category(Catergory_num) 
+exec sp_helpconstraint Movie
+
+alter table Rental 
+    add constraint DK_rental_due_date dateadd(day, 2, getdate()) for Due_date
+
+alter table NhomSanPham 
+alter column TenNhom nvarchar(40)
+insert into NhomSanPham values (1, N'Điện tử'), 
+                               (2, N'Gia Dụng')
+                               (3, N'Dụng Cụ Gia Đình')
+                               (4, N'Các Mặt Hàng Khác')
+            
+
+update SanPham 
+set DonGia = DonGia * 1.05 
+where MaSP = 2
+
+update HoaDon 
+set MaKH = null 
+where MaKH = 'KH3'
+
+update KhachHang 
+set MaKH = 'VI003' 
+where MaKH = 'KH3'
+
+update HoaDon 
+set MaKH = 'VI003' 
+where MaKH is null 
+
+exec sp_helpconstraint HoaDon 
+alter table HoaDon 
+    drop constraint 
+alter table HoaDon 
+    add constraint FK_HD_KH foreign key(MaKH) references KhachHang(MaKH) on update cascade 

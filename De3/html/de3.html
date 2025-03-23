@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px auto;
+        }
+        .wrapper {
+            width: 900px;
+            height: 960px;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: antiquewhite;
+        }
+        nav {
+            width: 100%;
+            height: 60px;
+        }
+        .content {
+            width: 900px;
+            height: 550px;
+        }
+        section {
+            width: 50%;
+            height: 550px;
+            float: left;
+        }
+        aside {
+            width: 50%;
+            height: 550px;
+            float: right;
+        }
+        footer {
+            width: 100%;
+            height: 60px;
+            clear: both;
+        }
+        nav ul li:first-child {
+            float: left;
+            margin-right: 200px;
+            margin-left: 20px;
+        }
+        nav ul {
+            list-style: none;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+        }
+        nav ul {
+            float: left;
+            margin-right: 150px;
+        }
+        nav form input {
+            margin-top: 5px;
+            float: left;
+        }
+        .sec-1 button {
+            width: 90px;
+            height: 90px;
+            border-radius: 100%;
+            float: right;
+        }
+        /* .sec {
+            padding-left: 20px;
+        } */
+        .sec-1 {
+            margin-top: 30px;
+            height: 40%;
+            margin-left: 20px;
+        }
+        .sec-2 {
+            height: 60%;
+            margin-left: 50px;
+        }
+        .sec-2 h1 {
+            font-size: 50px;
+            font-style: italic;
+        }
+        .aside1 {
+            width: 300px;
+            float: left;
+            margin-bottom: 20px;
+        }
+        .aside1 p {
+            font-style: italic;
+        }
+        .aside {
+            float: left;
+        }
+        .thanh {
+            margin-top: 200px;
+            float: right;
+        }
+        /* trasition là thời gian chờ cho xoay 
+        tranform là dùng để xoay bao nhiêu độ */
+        .xoay {
+            transition: 3s;
+        }
+        .xoay:hover {
+            transform: rotate(360deg);
+        }
+        strong {
+            font-size: 30px;
+        }
+        .f1 {
+            margin-left: 50px;
+            float: left;
+            width: 120px;
+        }
+        .f2 {
+            margin-left: 50px;
+            float: left;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            
+            <ul>
+                <li><a href="home.html"><img src="/De3/img/logo.png" alt=""></a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+            <form action="">
+                <input type="text" placeholder="search" required>
+            </form>
+            <img src="/De3/img/gio-hang.png" alt="">
+        </nav>
+        <div class="content">
+            <section>
+                    <div class="sec-1">
+                        <img src="/De3/img/nhan-ngang.png" alt="" width="350px">
+                        <button>Explore</button>
+                    </div>
+                    <div class="sec-2">
+                        <h1>Jewellery tells a great story</h1>
+                    </div>
+            </section>
+            <aside>
+                <div class="aside">
+                    <div class="aside1">
+                        <strong>Our Story</strong>
+                        <p>
+                            Modern jewelry is made of silver or platinum,  <br>
+                            often with precious or semi-precious stones. It evolved  <br>
+                            from shells, animal teeth, and other items used as body decoration in prehistoric times.
+                        </p>                        
+                    </div>
+                    <div class="aside2">
+                        <img src="/De3/img/nhan-doc.png" alt="" width="250px" class="xoay">
+                        <img src="/De3/img/nutplay.png" alt="">
+                        <span>Play video</span>
+                    </div>
+                </div>
+                <img src="/De3/img/thanh-doc.png" alt="" class="thanh">
+            </aside>
+        </div>
+        <footer>
+            <div class="f1">
+                <h4>Gold</h4>
+                <p>Her promisse had tem information</p>
+            </div>
+            <div class="f2">
+                <h4>Silver</h4>
+                <p>Her promisse had tem information</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

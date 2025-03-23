@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px auto;
+        }
+        .wrapper {
+            height: 860px;
+            width: 1089px;
+            background-color: aqua;
+        }
+        nav {
+            height: 60px;
+            width: 1089px;
+            background-color: rgb(36, 165, 72);
+        }
+        header {
+            height: 160px;
+            width: 1089px;
+            background-color: rgb(128, 0, 255);
+        }
+        .content {
+            height: 500px;
+            width: 1089px;
+            background-color: aqua;
+        }
+        footer {
+            height: 160px;
+            width: 1089px;
+            background-color: brown;
+        }
+        .menu-left {
+            height: 500px;
+            width: 25%;
+            background-color: rgb(255, 0, 102);
+            float: left;
+        }
+        .content-left {
+            height: 500px;
+            width: 37.5%;
+            background-color: rgb(255, 0, 0);
+            float: left;
+        }
+        .content-right {
+            height: 500px;
+            width: 37.5%;
+            background-color: blueviolet;
+            float: left;
+        }
+        .top-menu {
+            list-style: none;
+        }
+        .top-menu li {
+            float: left; 
+            width: 200px;
+            background-color: aqua;
+            line-height: 60px;
+        }
+        .top-menu li a {
+            text-decoration: none;
+        }
+        .top-menu li:hover {
+            background-color: green;
+        }
+        li:hover>a {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul class="top-menu">
+                <li><a href="">HOME</a></li>
+                <li><a href="">CONTACT</a></li>
+                <li><a href="">SERVICES</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">HELP</a></li>
+            </ul>
+        </nav>
+        <header></header>
+        <div class="content">
+            <div class="menu-left"></div>
+            <div class="content-right"></div>
+            <div class="content-left"></div>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>
