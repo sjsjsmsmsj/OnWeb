@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px auto;
+        }
+        .wrapper {
+            width: 960px;
+            height: 1089px;
+        }
+        nav {
+            width: 960px;
+            height: 60px;
+            background-color: rgb(164, 122, 155);
+        }
+        header {
+            width: 960px;
+            height: 120px;
+        }
+        .content {
+            width: 960px;
+            height: 550px;
+            
+        }
+        section {
+            width: 65%;
+            height: 550px;
+            float: left;
+            background-color: aqua;
+        }
+        aside {
+            width: 35%;
+            height: 550px;
+            float: right;
+        }
+        footer {
+            width: 960px;
+            height: 100px;
+            background-color: yellowgreen;
+        }
+        nav ul {
+            display: block;
+            float: left;
+        }
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+        nav ul li:nth-child(1) a,
+        nav ul li:nth-child(2) a,
+        nav ul li:nth-child(3) a {
+            color: purple;
+        }
+
+        nav ul li:last-child a {
+            color: blue;
+        }
+        nav form {
+            float: right;
+            margin-right: 10px;
+        }
+        nav ul, nav form {
+            margin-top: 20px;
+        }
+        nav form button {
+            background-color: aqua;
+            color: white;
+            border-radius: 5px;
+        }
+        section b {
+            color: red; 
+            font-size: large;
+            margin-left: 20px;
+        }
+        section form  {
+            margin-left: 20px;
+            border-radius: 10px;
+            width: 90%;
+            padding: 20px;
+        }
+        section form fieldset {
+            border: 2px solid grey;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    
+        section form tr td {
+            padding-bottom: 20px;
+        }
+        section form input, section form button {
+            border-radius: 5px;
+        }
+        .name {
+            width: 400px;
+        }
+        .btn1 {
+            margin-left: 100px;
+            padding: 5px;
+        }
+        .btn2 {
+            margin-left: 15px;
+            padding: 5px;
+        }
+        footer {
+            text-align: center;
+        }
+        footer p {
+            padding-top: 30px;
+            color: grey;
+        }
+        .div strong {
+            color: red;
+            font-size: 25px;
+            border-bottom: 2px solid red;
+        }
+        .div img {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul>
+                <li><a href="#">HOME </a></li>|
+                <li><a href="#">ABOUTS </a></li>|
+                <li><a href="#">SERVICES </a></li>|
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+            <form action="">
+                <label for="">Search:</label>
+                <input type="text" placeholder="Search here...">
+                <button>Gửi</button>
+            </form>
+        </nav>
+        <header>
+            <img src="/ThuongKy/image/header.png" alt="" width="100%" height="100%">
+        </header>
+        <div class="content">
+            <section>
+                <b>Contact</b>
+                <form action="">
+                    <fieldset>
+                        <legend>Information</legend>
+                        <table>
+                            <tr>
+                                <td><label for="">Name:</label></td>
+                                <td><input type="text" placeholder="Your name" class="name"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="">Email:</label></td>
+                                <td><input type="text" placeholder="Your email"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="">Gender:</label></td>
+                                <td>
+                                    <label for="">Male</label>
+                                    <input type="radio" name="" id="">
+                                    <label for="">Female</label>
+                                    <input type="radio" name="" id="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><button type="submit" class="btn1">Submit</button>
+                                    <button type="reset" class="btn2">Reset</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </form>
+            </section>
+            <aside>
+                <div class="div">
+                    <strong>Vourche</strong> <br>
+                    <img src="/ThuongKy/image/aside1.png" alt="" >
+                </div>
+                <div class="div">
+                    <strong>Festival</strong> <br>
+                    <img src="/ThuongKy/image/aside2.png" alt="">
+                </div>
+                <div class="div">
+                    <strong>Transport</strong> <br>
+                    <img src="/ThuongKy/image/aside3.png" alt="">
+                </div>
+            </aside>
+        </div>
+        <footer>
+            <p>Copyright by...</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+

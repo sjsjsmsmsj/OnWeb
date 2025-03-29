@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px auto;
+        }
+        .wrapper {
+            width: 960px;
+            height: 750px;
+        }
+        header {
+            width: 960px;
+            height: 150px;
+            background-image: url('/GiaiDe2/img/header.png');
+        }
+        .menu {
+            width: 960px;
+            height: 50px;
+            background-color: green;
+        }
+        .content {
+            width: 960px;
+            height: 550px;
+        }
+        section {
+            width: 65%;
+            height: 550px;
+            float: left;
+            background-color: aqua;
+        }
+        aside {
+            width: 35%;
+            height: 550px;
+            float: right;
+            background-image: url('/GiaiDe2/img/aside.png');
+        }
+        footer {
+            width: 960px;
+            height: 100px;
+            background-color: green;
+        }
+        header h1 {
+            text-align: center;
+            padding-top: 50px;
+            color: white;
+            font-size: 50px;
+            font-weight: bold;
+            text-shadow: 2px 3px 4px ;
+        }
+        nav ul {
+            padding-top: 12px;
+            display: block;
+            float: left;
+        }
+        nav ul li {
+            display: inline;
+            list-style: none;
+            position: relative;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            background-color: rgb(7, 48, 7);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .menu form {
+            float: right;
+            margin-right: 5px;
+            margin-top: 12px;
+        }
+        .menu form input, .menu form button {
+            border-radius: 5px;
+        }
+        nav ul li:hover a {
+            background-color: yellow;
+            color: red;
+            text-transform: uppercase;
+        }  
+        .sub-menu {
+            display: none;
+            position: absolute;
+            left: 0px;
+        }
+        .sub-menu li a {
+            display: block;
+            color: white;
+            background-color: green !important;
+        }
+        nav ul li:hover .sub-menu {
+            display: block;
+        }
+        .sec1 strong {
+            color: red;
+            text-shadow: 2px 3px 3px;
+            font-size: 25px;
+        }
+        .sec1 div {
+            background-color: white;
+            width: 520px;
+            box-shadow: 10px 10px 15px grey;
+            font-style: italic;
+            border: 1px solid grey;
+            border-radius: 7px;
+            margin-top: 25px;
+            margin-right: 20px;
+        }
+        .sec2 {
+            margin-top: 20px;
+        }
+        .sec21 {
+            height: 150px;
+        }
+        .sec21 img {
+            float: left;
+            margin-right: 10px;
+        }
+        .sec22 img {
+            float: left;
+            margin-right: 10px;
+        }
+        aside h2 {
+            color: red;
+            text-shadow: 2px 3px 3px;
+            font-size: 25px;
+        }
+        aside form {
+            border-radius: 7px;
+            margin-top: 15px;
+            background-color: white;
+            width: 300px;
+            height: 500px;
+        }
+        aside form input {
+            border-radius: 7px;
+            width: 100px;
+        }
+        .ip {
+            width: 45px;
+        }
+        .btn1 {
+            margin-left: 50px;
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .btn2 {
+            background-color: red;
+            color: white;
+            padding: 10px;
+            margin-left: 3px;
+        }
+        aside form table tr td {
+            padding-bottom: 15px;
+        }
+        footer table {
+            width: 200px;
+            height: 40px;
+        }
+        footer table tr td{
+            color: white;
+            margin-top: 10px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Du lịch bốn mùa</h1>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">Trang chủ</a></li>
+                        <li><a href="#">Tìm Tour</a></li>
+                        <li>
+                            <a href="#">Dịch vụ</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Đặt phòng</a></li>
+                                <li><a href="#">Đặt vé máy bay</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </nav>
+                <form action="">
+                    <input type="text">
+                    <button>Search</button>
+                </form>
+            </div>
+        </header>
+        <div class="content">
+            <section>
+                <div class="sec1">
+                    <strong>Giới thiệu</strong>
+                    <div>
+                        Viettravel - Nhà tổ chức du lịch chuyên nghiệp. Website travel.com.vn tự hào là 
+                        magnj bán tour du lịch trực tuyền hàng đầu tại Việt Nam, vời hơn 1.000 tour Vietravel Channel sẽ mang đến cho 
+                        quy khán giả những thông tin bổ ích, thiết thực; Nội dung phong phú; hình thức thể hiện mới mẻ, hiện đại 
+                        phù hợp với cả đối tượng khó tính nhất
+                    </div>
+                </div>
+                <div class="sec2">
+                    <div class="sec21">
+                        <img src="/GiaiDe2/img/content1.png" alt="">
+                        <div>
+                            <h2>Tour Bali 4N3Đ: Khám phá BALI</h2>
+                            <ul type="none">
+                                <li>Giá tour chọn gói: 9.990.000 VNĐ</li>
+                                <li>- Khởi hành từ: Hồ Chí Minh</li>
+                                <li>- Điểm đến: Bali</li>
+                                <li>- Lịch trình: 4 ngày 3 đêm</li>
+                                <li>- Phương tiện: Máy bay</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sec22">
+                        <img src="/GiaiDe2/img/content2.png" alt="">
+                        <div>
+                            <h2>Tour Hàn Quốc mùa thu 5N4Đ</h2>
+                            <ul type="none">
+                                <li>Giá tour chọn gói: 16.990.000 VNĐ</li>
+                                <li>- Khởi hành từ: Hồ Chí Minh</li>
+                                <li>- Điểm đến: Hàn Quốc</li>
+                                <li>- Lịch trình: 5 ngày 4 đêm</li>
+                                <li>- Phương tiện: Máy bay</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <aside>
+                <form action="">
+                    <h2>Thông tin đặt tour</h2>
+                    <table>
+                        <tr>
+                            <td><label for="">Họ tên</label></td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Điện thoại</label></td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Email</label></td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Số người lớn:</label><input type="text" class="ip"></td>
+                            <td><label for="">Số trẻ em</label><input type="text" class="ip"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Thanh toán</label></td>
+                            <td>
+                                <select name="" id="">
+                                    <option value="">Trực tiếp</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Các yêu cầu đặc biệt</label></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><textarea name="" id="" cols="30" rows="5"></textarea></td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <button class="btn1">Đặt tour</button>
+                                <button class="btn2">Hủy đặt tour</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </aside>
+        </div>
+        <footer>
+            <table>
+                <tr>
+                    <td>Họ tên sinh viên:</td>
+                    <td>........</td>
+                </tr>
+                <tr>
+                    <td>Mã sinh viên:</td>
+                    <td>........</td>
+                </tr>
+                <tr>
+                    <td>Mã lớp:</td>
+                    <td>.......</td>
+                </tr>
+            </table>
+        </footer>
+    </div>
+</body>
+</html>
