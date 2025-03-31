@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Boostrap/css/bootstrap.min.css">
+    <script src="/Boostrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="/Boostrap/js/bootstrap.min.js"></script> -->
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">col-md-6</div>
+            <div class="col-md-6 active">col-md-6</div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">col-md-4</div>
+            <div class="col-md-8">col-md-8</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">col-md-3</div>
+            <div class="col-md-9">col-md-9</div>
+        </div>
+    </div>
+
+    <!--
+        display-1 để chữ to 
+    -->
+    <h1 class="display-1">Display heading 1</h1>
+
+    <h1>h1 heading <small>secondary text</small></h1>
+
+    <!--  
+    từ khóa lead làm nổi bật văn bản
+    -->
+    <p class="lead">This is how a normal paragraph looks like in Boostrap.</p>
+
+    <!--
+        Lưu ý: là khi sử dụng chỉnh văn bản sử dụng từ khóa: text-(cái gì đó tùy mình)
+    -->
+    <!-- 
+        start: là bên trái
+        center: ở giữa 
+        end: cuối
+    -->
+    <p class="text-start">Left Aligned text on all viewport sizes.</p>
+    <p class="text-center">Center Aligned text on all viewport sizes.</p>
+    <p class="text-end">Right Aligned text on all viewport sizes.</p>
+
+    <!--
+        lowercase: chữ không hoa
+        uppercase: chữ hoa
+        capitalize:chữ hoa đầu từ
+    -->
+    <div class="m-4">
+        <p class="text-lowercase">The quick brown fox jumps over the lazy dog.</p>
+        <p class="text-uppercase">The quick brown fox jumps over the lazy dog.</p> 
+        <p class="text-capitalize">The quick brown fox jumps over the lazy dog.</p>
+    </div>
+
+    <p class="text-primary">Primary</p>
+
+    <button type="button" class="btn btn-outline-primary">Primary</button>
+
+    <!--
+        btn-group: để nhóm các nút lại với nhau
+        btn-group-vertical: thì nó nằm thẳng đứng
+    -->
+    <div class="btn-group">
+        <button type="button" class="btn btn-light">Home</button>
+        <button type="button" class="btn btn-primary">About</button>
+        <button type="button" class="btn btn-success">Services</button>
+    </div>
+
+    <!--
+        Trong hình ảnh thì nhớ sài những cái này
+        rounded: nó bo góc
+        rounded-circle: nó bo góc và tròn 
+        img-thumbnail: nó có hình ô vuông bên ngoài
+    -->
+    <img src="/Boostrap/hinh.png" alt="" class="rounded">
+    <img src="/Boostrap/hinh.png" alt="" class="rounded-circle">
+    <img src="/Boostrap/hinh.png" alt="" class="img-thumbnail">
+
+    <!--
+        sử dụng table nhớ ghi class: table 
+        còn các thuộc tính trong nó: 
+        + table-striped: tạo sọc vằn
+        + table-hover: khi bạn lướt qua
+        + table-bordered: thì thêm đường viền
+        
+        Ta cần thêm màu gì thì ghi trên dòng: 
+        table-(màu mình muốn)
+
+        + table-reponsive: để tương thích với thiết bị
+    -->
+    <table class="table table-hover table-striped table-bordered table-responsive">
+        <tr class="table-dark">
+            <td>#</td>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Email</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Clark</td>
+            <td>Kent</td>
+            <td>clarkkent@mail.com</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Peter</td>
+            <td>Parker</td>
+            <td>peterparker@mail.com</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>John</td>
+            <td>Carter</td>
+            <td>john carter@gmail.com</td>
+        </tr>
+    </table>
+
+    <!--
+        Drop Down
+        + .dropdown: chỉ định một menu thả xuống
+        + .dropdown-toggle: là siêu liên kết 
+        + data-bs-toggle = "dropdown" yêu cầu phần tử chuyển đổi thả xuống 
+        + data-bs-display = "static" hiển thị bên dưới
+        thuộc câu này:         
+        - <button type="button" class="btn btn-primary dropdown-toggle" id="dropdownMenu" data-bs-toggle="dropdown" data-bs-display="static">
+        - <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+        - thẻ a thì class= dropdown-item
+    -->
+    <div class="dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle"  data-bs-toggle="dropdown" data-bs-display="static" id="dropdownMenu">
+            Dropdown button
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+            <li><a href="#" class="dropdown-item">Action</a></li>
+            <li><a href="#" class="dropdown-item">Another action</a></li>
+            <li><a href="#" class="dropdown-item">Something else here</a></li>
+        </ul>
+    </div>
+    
+
+    <!--
+        Nav
+
+        ul : class=nav 
+        li : class=nav-item 
+        a :  class=nav-link
+        - nav-tabs để tạo điều hướng tabs
+        - nav-pills điều hướng 
+
+        Cần trang trí 
+        - bi-house-door: ngôi nhà 
+        - bi-person: người
+        - bi-barchart: hình đồ thị
+    -->
+    <ul class="nav">
+        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Profile</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Messages</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Reports</a></li>
+    </ul>
+
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <div class="container-fluid">
+            <!-- Search Form -->
+            <form class="d-flex me-auto">
+                <input class="form-control me-2" type="search" placeholder="Search">
+                <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+    
+            <!-- Nút Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBar">
+            </button>
+    
+            <!-- Danh sách Menu -->
+            <div class="collapse navbar-collapse" id="navBar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Products</a>
+                    
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--
+        Form
+
+        form-control: tạo kiểu thích hợp cho form cho thẻ input
+    -->
+    <form>
+        <div class="row">
+            <div class="col-lg-12">
+                <label for="">Email:</label>
+                <input type="text" class="form-control" placeholder="Enter email" name="email"> 
+            </div>
+        </div>  
+        <div class="row">
+            <div class="col-lg-12">
+                <label for="">Password:</label>
+                <input type="password" class="form-control" placeholder="Enter password" name="pswd"> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <input type="checkbox" name="" id="">
+                <label for="">Remember me</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <input type="submit" value="Submit" class="btn btn-primary">
+            </div>
+        </div>
+      </form>
+
+
+      <!-- 
+        Modal: là một hộp thoại 
+
+        - class="modal": Xác định modal.
+
+        - id="myModal": Định danh modal.
+
+        - class="modal-dialog": Hộp chứa nội dung modal.
+
+        - class="modal-content": Nội dung của modal (header, body, footer).
+
+        - data-bs-dismiss="modal": Đóng modal khi bấm nút.
+      -->
+        <!-- Nút mở Modal -->
+
+    
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Modal</button>
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Modal Heading</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body..</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
